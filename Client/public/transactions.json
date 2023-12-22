@@ -1,0 +1,68 @@
+[
+    {
+        "type" : "Bills",
+        "color" : "red",
+        "amount" : 500,
+        "details" : {
+            "organisation" : "Satyam Opticals",
+            "date" : "10-12-2023",
+            "closingBalance":1000000,
+            "description" : ""
+        }
+    },
+    {
+        "type" : "Income",
+        "color" : "green",
+        "amount" : 100000,
+        "details" : {
+            "organisation" : "Amazon",
+            "date" : "10-12-2023",
+            "closingBalance":10000000,
+            "description" : ""
+        }
+    },
+    {
+        "type" : "Spendings",
+        "color" : "red",
+        "amount" : 100,
+        "details" : {
+            "organisation" : "Local Shops",
+            "date" : "10-12-2023",
+            "closingBalance":10000000,
+            "description" : ""
+        }
+    },
+    {
+        "type" : "Savings",
+        "color" : "yellow",
+        "amount" : 115500,
+        "details" : {
+            "organisation" : "Satyam Opticals",
+            "date" : "10-12-2023",
+            "closingBalance":10000000,
+            "description" : ""
+        }
+    },
+    {
+        "type" : "Savings",
+        "color" : "yellow",
+        "amount" : 11500,
+        "details" : {
+            "organisation" : "Satyam Opticals",
+            "date" : "10-12-2023",
+            "closingBalance":10000000,
+            "description" : ""
+        }
+    },
+    {
+        "type" : "Savings",
+        "color" : "yellow",
+        "amount" : 22000,
+        "details" : {
+            "organisation" : "Satyam Opticals",
+            "date" : "10-12-2023",
+            "closingBalance":2000000,
+            "description" : ""
+        }
+    }
+]
