@@ -19,7 +19,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import BottomBar from '../components/BottomBar';
 import ActionBox from '../components/ActionBox';
 import {Vector} from "../utils/Images"
-
+import {url} from '../../urlconfig'
 
 export default  function Home({navigation }: {navigation: any}) : JSX.Element {
     const isDarkMode : Boolean = useColorScheme() === "dark";
@@ -83,13 +83,14 @@ export default  function Home({navigation }: {navigation: any}) : JSX.Element {
             left:"32%",
             top:"30%",
             fontSize:27,
+            color:"white",
             textShadowRadius : 8,
             textShadowOffset : {width:0,height:6},
             textShadowColor : 'black'
         }
       });
     useEffect(()=>{
-        fetch("http://192.168.29.165:4000/api/v1/getTransaction")
+        fetch(`${url}/api/v1/getTransaction`)
             .then(res => {
                 return res.json();
             })

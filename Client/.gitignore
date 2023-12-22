@@ -1,7 +1,7 @@
 # OSX
 #
 .DS_Store
-
+urlconfig.js
 # Xcode
 #
 build/
