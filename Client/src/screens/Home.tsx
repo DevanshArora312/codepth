@@ -1,6 +1,7 @@
 import {
     ColorValue,
     FlatList,
+  Image,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -17,7 +18,7 @@ import Icon2 from "react-native-vector-icons/Feather"
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import BottomBar from '../components/BottomBar';
 import ActionBox from '../components/ActionBox';
-// import Blob from "../blob/index"
+import {Vector} from "../utils/Images"
 
 
 export default  function Home({navigation }: {navigation: any}) : JSX.Element {
@@ -39,9 +40,12 @@ export default  function Home({navigation }: {navigation: any}) : JSX.Element {
     const styles = StyleSheet.create({
         worldContainer : {
           alignItems:"center",
-          justifyContent:"center",
+          justifyContent:"flex-start",
           backgroundColor:"black",
           height:'35%',
+          position:'relative',
+          paddingTop:15,
+          rowGap:3
         },
         
         transactionHeader : {
@@ -73,6 +77,15 @@ export default  function Home({navigation }: {navigation: any}) : JSX.Element {
             marginTop:10,
             paddingHorizontal:30,
             paddingVertical:8
+        },
+        btc : {
+            position:"absolute",
+            left:"32%",
+            top:"30%",
+            fontSize:27,
+            textShadowRadius : 8,
+            textShadowOffset : {width:0,height:6},
+            textShadowColor : 'black'
         }
       });
     useEffect(()=>{
@@ -94,9 +107,9 @@ export default  function Home({navigation }: {navigation: any}) : JSX.Element {
             {/* <Canvas camera={{position:[0.0,0.0,8.0]}}>
                 <Blob/>
             </Canvas> */}
-            <Text>
-                Hello
-            </Text>
+            <Image source={Vector}/>
+            <Text style={styles.btc}> 5.004 BTC </Text>
+            <Text style={{fontSize:25}}>Your Bitcoins Balance </Text>
         </View>
         <ActionBox/>
         <View style={styles.emptybox} />

@@ -1,6 +1,8 @@
-import { View, Text,StyleSheet, ColorValue ,useColorScheme, TouchableOpacity} from 'react-native'
+import { View, Text,StyleSheet, ColorValue ,useColorScheme, TouchableOpacity, Image} from 'react-native'
 import React from 'react'
 import Icon from "react-native-vector-icons/MaterialIcons"
+import { Bills,Spendings,Savings,Income } from '../utils/Images'
+
 type TransacProp = {
     color : ColorValue,
     type : String,
@@ -39,14 +41,32 @@ export default function TransactionBox(props : TransacProp ): JSX.Element {
             color : isDarkMode ? "white" : "black"
         }
     })
+    var image;
+    switch(props.type){
+        case "Bills" :
+            image = Bills;
+            break;
+        case "Spendings" :
+            image = Spendings;
+            break;
+        case "Savings" :
+            image = Savings;
+            break;
+        case "Income" :
+            image = Income;
+            break;
+    }
   return (
     <TouchableOpacity onPress={() => {
         navigation.navigate('SingleTransac');
     }}>
         <View style={styles.box} >
-            <Text style={styles.genText}>
-                {props.type}
-            </Text>
+            <View style={style.view}>
+                <Image source={image} style={style.imageStyle}/>
+                <Text style={styles.genText}>
+                    {props.type}
+                </Text>
+            </View>
             <View style={styles.boxView}>
                     <Text style={styles.coloredText}>
                     {(props.type === "Spendings" || props.type === "Bills" ) ? "-" : "+"}{"$"}{`${props.amount}`}
@@ -57,3 +77,16 @@ export default function TransactionBox(props : TransacProp ): JSX.Element {
     </TouchableOpacity>
   )
 }
+
+const style = StyleSheet.create({
+    imageStyle : {
+        width : 40,
+        height:40,
+        borderRadius :50
+    },
+    view : {
+        flexDirection:"row",
+        alignItems:"center",
+        columnGap:7
+    }
+})

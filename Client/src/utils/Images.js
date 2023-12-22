@@ -1,0 +1,5 @@
+export const Bills = require("../../public/Bills.png")
+export const Savings = require("../../public/Savings.png")
+export const Spendings = require("../../public/Spendings.png")
+export const Income = require("../../public/Income.png") 
+export const Vector = require("../../public/Vector.png") 
