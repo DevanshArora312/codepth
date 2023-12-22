@@ -5,12 +5,16 @@ Due to college and less experience with react-native (I have worked with React.j
 ### Installation 
 
 Simply clone the repository and run the following commands -
-`cd codepth`
+```
+cd codepth
+```
 ```
 cd Client
 npm i
 ```
-`cd ..`
+```
+cd ..
+```
 ```
 cd Server
 npm i
